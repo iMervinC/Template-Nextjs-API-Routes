@@ -1,4 +1,10 @@
-export const ex = (req, res, next) => {
-  req.user = { name: 'mervin c' }
-  next()
+import { getSession } from 'next-auth/client'
+
+export const ex = async (req, res, next) => {
+  try {
+    const session = await getSession({ req })
+
+    req.user = session.user
+    next()
+  } catch (error) {}
 }

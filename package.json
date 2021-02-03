@@ -8,8 +8,10 @@
     "start": "next start"
   },
   "dependencies": {
+    "mongodb": "^3.6.4",
     "mongoose": "^5.11.14",
     "next": "10.0.6",
+    "next-auth": "^3.2.0",
     "next-connect": "^0.9.1",
     "react": "17.0.1",
     "react-dom": "17.0.1"
